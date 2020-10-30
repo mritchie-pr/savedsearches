@@ -1,0 +1,21 @@
+{
+  "name": "savedsearches",
+  "version": "0.0.1",
+  "description": "Saved Search minimum viable proof of concept",
+  "main": "index.js",
+  "repository": "https://github.com/mritchie-pr/savedsearches.git",
+  "author": "mritchie-pr <mritchie@policyreporter.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "serve public"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "serve": "^11.3.2"
+  },
+  "peerDependencies": {
+    "bootstrap": "^4.5.3"
+  }
+}
