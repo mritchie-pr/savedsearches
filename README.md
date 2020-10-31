@@ -54,3 +54,5 @@ Clone this repo into your local machine, then in the cloned `savedsearches` fold
 ```
 npm install && npm start
 ```
+
+You can then browse to http://localhost:5000/public and the page should load
