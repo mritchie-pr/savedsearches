@@ -1,0 +1,39 @@
+div {
+    position: relative;
+    display: inline-block;
+}
+.summary {
+    cursor: pointer;
+}
+output::before {
+    content: '(';
+}
+output::after {
+    content: ')';
+}
+menu {
+    position: absolute;
+    top: 25px;
+    min-width: 300px;
+    border: 1px solid #333;
+    border-radius: 0 0 5px 5px;
+    border-top: none;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+    background-color: #e3f2fd;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+}
+menu.closed {
+    display: none;
+}
+menu ul {
+    margin: 0;
+    list-style-type: none;
+    text-indent: 0;
+    padding: 0;
+}
+menu ul li {
+    margin: 0;
+    padding: 5px 10px;
+}

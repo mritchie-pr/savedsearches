@@ -2,17 +2,29 @@
 <html lang="en-us">
     <head>
         <title>Saved Searches Minimum Viable Proof of Concept</title>
+        <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <script type="module" src="/public/modules/savedsearch/index.js"></script>
     </head>
     <body>
-        <header>
-            <savedsearch-selector>
-                <a href="#selector" class="savedsearch-selector-legacy">Saved Searches</a>
-            </savedsearch-selector>
-        </header>
-        
+        <div class="container">
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
 
-        <savedsearch-button>
-            <a href="#button" class="savedsearch-button-legacy">Save this Search</a>
-        </savedsearch-button>
+                    <savedsearch-selector>
+                        <a href="#selector" class="savedsearch-selector-legacy">Saved Searches</a>
+                    </savedsearch-selector>
+
+                </nav>
+            </header>
+            <main class="pt-3">
+
+                <savedsearch-button>
+                    <a href="#button" class="savedsearch-button-legacy">Save this Search</a>
+                </savedsearch-button>
+
+            </main>
+
+            
+        </div>
     </body>
 </html>
