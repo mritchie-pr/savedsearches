@@ -16,9 +16,10 @@ For browsers that support the technology, custom tags like the above can be regi
 * The developer can add child content to the custom tags that are suppressed if the browser can handle the custom tags natively, but display if it can't -- similar to what developers do for iframes. The pro with this approach is that there is no additional Javascript needed and in fact is even a bit leaner because the web component script is also ignored. The con is that the experience isn't quite as nice for the user of these browsers.
 
 ## The Proposed Approach
-* Add the custom `savedsearch-selector` tag to the customer nav in the header
-* For whatever search results are saveable, add the custom `savedsearch-button` tag to the rendered results
-* Whenever the user submits the new saved search, an event is triggered that the selector will listen to, which automatically updates the component with the new search
+* Add the custom `savedsearch-selector` tag to the customer nav in the header.
+* For whatever search results are saveable, add the custom `savedsearch-button` tag to the rendered results.
+* Whenever the user submits the new saved search, an event is triggered that the selector will listen to, which automatically updates the component with the new search.
+* For older browsers without native support for script[type module], the custom tags won't be registered and the legacy code will be displayed instead, which will still allow for a functioning interface for viewing and creating searches.
 
 ## Main React Administrative Page
 This would be a full page app with a table showing the full, clickable list of available searches, along with administrative controls to delete them. There would also be an interface to create new searches.
