@@ -47,3 +47,10 @@ Example:
   <a href="/savedsearch/create?url=somepageetcetc" class="savedsearch-button-legacy">Save this Search</a>
 </savedsearch-button>
 ```
+
+## Running the proposal
+Clone this repo into your local machine, then in the cloned `savedsearches` folder, execute the following in the command line:
+
+```
+npm install && npm start
+```
