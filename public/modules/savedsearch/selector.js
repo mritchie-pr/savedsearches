@@ -23,12 +23,14 @@ export class SavedSearchSelector extends HTMLElement {
         this.menu = this.shadowRoot.querySelector('menu');
         this.toggle.addEventListener('click', this.toggleMenu.bind(this));
         window.addEventListener('savedsearch-new', this.updateMenuLinks.bind(this));
+        this.menu.addEventListener('click', this.handleMenuLink.bind(this));
         this.updateMenuLinks();
     }
     
     disconnectedCallback() {
         this.toggle.removeEventListener('click', this.toggleMenu);
         window.removeEventListener('savedsearch-new', this.updateMenuLinks);
+        this.menu.removeEventListener('click', this.handleMenuLink);
     }
 
     toggleMenu() {
@@ -61,6 +63,11 @@ export class SavedSearchSelector extends HTMLElement {
             }).join('') + '</ul>';
     }
 
+    handleMenuLink(e) {
+        if (e.target.tagName === 'a') {
+            document.location.href = e.target.getAttribute('href');
+        }
+    }
 
 }
 
